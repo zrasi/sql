@@ -5,8 +5,12 @@ Create a logical model for a small bookstore. 📚
 
 At the minimum it should have employee, order, sales, customer, and book entities (tables). Determine sensible column and table design based on what you know about these concepts. Keep it simple, but work out sensible relationships to keep tables reasonably sized. Include a date table. There are several tools online you can use, I'd recommend [_Draw.io_](https://www.drawio.com/) or [_LucidChart_](https://www.lucidchart.com/pages/).
 
+My answer: C:\Users\zarri\sql\03_homework\images\Zarrin_sql_assignment1_q1_ERD1.drawio.png
+
 ## Question 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
+
+My answer: C:\Users\zarri\sql\03_homework\images\Zarrin_sql_assignment1_q2_ERD2.drawio.png
 
 ## Question 3
 The store wants to keep customer addresses. Propose two architectures for the CUSTOMER_ADDRESS table, one that will retain changes, and another that will overwrite. Which is type 1, which is type 2?
@@ -17,6 +21,11 @@ Bonus: Are there privacy implications to this, why or why not?
 ```
 Your answer...
 ```
+My answer: C:\Users\zarri\sql\03_homework\images\Zarrin_sql_assignment1_q3.drawio.png & 
+C:\Users\zarri\sql\03_homework\images\Zarrin_sql_assignment1_q1_2_3.drawio.png
+
+There are privacy implications to consider when storing personal informations like customer addresses. Both architectures retain customer address information, which could potentially include sensitive personal data. Type 2 model retains historical changes and may pose greater privacy risks as it keeps a more detailed history of customer's address updates over time. It is important to have proper security measures and comply with personal and data protection regulations to ensure that customer privacy is protected, particularly with type 2 SCD model.
+
 
 ## Question 4
 Review the AdventureWorks Schema [here](https://i.stack.imgur.com/LMu4W.gif)
@@ -25,6 +34,9 @@ Highlight at least two differences between it and your ERD. Would you change any
 ```
 Your answer...
 ```
+My answer: 
+
+1-	My ERD displays the type of the relationship between tables, like one to many or many to many, which is not shown in AdventureWorks Schema. For example, in my ERD it is shown that "Employee Shift" and "Employee" tables have a "Many mandatory" to "Many Optional" relationship, as each shift must have at least one employee assigned to it, and an employee may or may not have any shifts assigned to them.  This means that while each shift must have employees assigned to it (many mandatory), employees may have shifts or may not have any shifts assigned to them (many optional).
 
 # Criteria
 
